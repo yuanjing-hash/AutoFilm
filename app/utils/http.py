@@ -32,59 +32,54 @@ class HTTPClient:
         """
         初始化 HTTP 客户端
         """
+        self.__new_clients()
 
-        self.__new_async_client()
-        self.__new_sync_client()
-
-    def __new_sync_client(self):
+    def __new_clients(self):
         """
-        创建新的同步 HTTP 客户端
+        创建新的同步和异步 HTTP 客户端
         """
         self.__sync_client = Client(http2=True, follow_redirects=True, timeout=10)
-
-    def __new_async_client(self):
-        """
-        创建新的异步 HTTP 客户端
-        """
         self.__async_client = AsyncClient(http2=True, follow_redirects=True, timeout=10)
 
-    def close_sync_client(self) -> None:
-        """
-        关闭同步 HTTP 客户端
-        """
-        if self.__sync_client:
-            self.__sync_client.close()
+    # --- 我们将不再单独关闭客户端，让 httpx 内部管理连接池 ---
+    # def close_sync_client(self) -> None:
+    #     ...
+    # async def close_async_client(self) -> None:
+    #     ...
 
-    async def close_async_client(self) -> None:
-        """
-        关闭异步 HTTP 客户端
-        """
-        if self.__async_client:
-            await self.__async_client.aclose()
-
-    @Retry.sync_retry(TimeoutException, tries=3, delay=1, backoff=2)
+    @Retry.sync_retry((TimeoutException, RequestError), tries=3, delay=1, backoff=2)
     def _sync_request(self, method: str, url: str, **kwargs) -> Response | None:
         """
         发起同步 HTTP 请求
         """
         try:
+            # 如果客户端已关闭，则重新创建
+            if self.__sync_client.is_closed:
+                logger.debug("同步客户端已关闭，正在重新创建...")
+                self.__sync_client = Client(http2=True, follow_redirects=True, timeout=10)
             return self.__sync_client.request(method, url, **kwargs)
-        except TimeoutException as e:
-            self.close_sync_client()
-            self.__new_sync_client()
-            raise TimeoutException(f"HTTP 请求超时：{e}")
+        except (TimeoutException, RequestError) as e:
+            logger.warning(f"同步请求失败: {e}，将重建客户端并重试...")
+            # 发生网络错误时，丢弃旧客户端并创建一个新的
+            self.__sync_client = Client(http2=True, follow_redirects=True, timeout=10)
+            raise  # 重新抛出异常，让重试装饰器捕获
 
-    @Retry.async_retry(TimeoutException, tries=3, delay=1, backoff=2)
+    @Retry.async_retry((TimeoutException, RequestError), tries=3, delay=1, backoff=2)
     async def _async_request(self, method: str, url: str, **kwargs) -> Response | None:
         """
         发起异步 HTTP 请求
         """
         try:
+            # 如果客户端已关闭，则重新创建
+            if self.__async_client.is_closed:
+                logger.debug("异步客户端已关闭，正在重新创建...")
+                self.__async_client = AsyncClient(http2=True, follow_redirects=True, timeout=10)
             return await self.__async_client.request(method, url, **kwargs)
-        except TimeoutException as e:
-            await self.close_async_client()
-            self.__new_async_client()
-            raise TimeoutException(f"HTTP 请求超时：{e}")
+        except (TimeoutException, RequestError) as e:
+            logger.warning(f"异步请求失败: {e}，将重建客户端并重试...")
+            # 发生网络错误时，丢弃旧客户端并创建一个新的
+            self.__async_client = AsyncClient(http2=True, follow_redirects=True, timeout=10)
+            raise  # 重新抛出异常，让重试装饰器捕获
 
     @overload
     def request(
