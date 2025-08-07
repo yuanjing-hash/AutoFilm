@@ -15,7 +15,7 @@ Alist2StrmList:
     subtitle: True                      # 下载字幕文件
     image: False                        # 不下载图片文件
     nfo: True                           # 下载 .nfo 文件
-    mode: RawURL                      # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -35,7 +35,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -55,7 +55,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -75,7 +75,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -95,7 +95,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -115,7 +115,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -135,7 +135,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -155,7 +155,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -175,7 +175,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -195,7 +195,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -215,7 +215,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
@@ -235,7 +235,7 @@ Alist2StrmList:
     subtitle: True
     image: False
     nfo: True
-    mode: RawURL                    # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
+    mode: AlistPath                   # Strm 文件中的内容（可选项：AlistURL、RawURL、AlistPath）
     overwrite: False                  # 覆盖模式，本地路径存在同名文件时是否重新生成/下载该文件（可选，默认 False）
     sync_server: True                 # 是否同步服务器（可选，默认为 True）
     sync_ignore: \.(nfo|jpg)$         # 同步时忽略的文件正则表达式（可选，默认为空，仅对文件名及拓展名有效，对路径无效）
