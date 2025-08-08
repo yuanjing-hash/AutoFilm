@@ -6,11 +6,11 @@ Settings:
 Alist2StrmList:
   - id: 国产剧                            # 标识 ID
     cron: 0 1 * * * # 定时任务表达式 (每日凌晨 1:00)
-    url: http://openlist:5244          # Alist 服务器地址
+    url: http://192.168.1.2:5244          # Alist 服务器地址
     username: admin                     # Alist 用户名
     password: Shuonoopenlist1791..      # Alist 密码
     source_dir: /123云盘/Video/TV/国产剧  # Alist 服务器上的源文件夹路径
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/TV/国产剧 # strm 文件输出路径
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/TV/国产剧 # strm 文件输出路径
     flatten_mode: False                 # 平铺模式，默认为 False
     subtitle: True                      # 下载字幕文件
     image: False                        # 不下载图片文件
@@ -26,11 +26,11 @@ Alist2StrmList:
 
   - id: 儿童剧
     cron: 0 2 * * * # 定时任务表达式 (每日凌晨 2:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/TV/儿童
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/TV/儿童剧
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/TV/儿童剧
     flatten_mode: False
     subtitle: True
     image: False
@@ -46,11 +46,11 @@ Alist2StrmList:
 
   - id: 日韩剧
     cron: 0 3 * * * # 定时任务表达式 (每日凌晨 3:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/TV/日韩剧
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/TV/日韩剧
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/TV/日韩剧
     flatten_mode: False
     subtitle: True
     image: False
@@ -66,11 +66,11 @@ Alist2StrmList:
 
   - id: 欧美剧
     cron: 0 4 * * * # 定时任务表达式 (每日凌晨 4:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/TV/欧美剧
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/TV/欧美剧
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/TV/欧美剧
     flatten_mode: False
     subtitle: True
     image: False
@@ -86,11 +86,11 @@ Alist2StrmList:
 
   - id: 纪录片
     cron: 0 5 * * * # 定时任务表达式 (每日凌晨 5:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/TV/纪录片
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/TV/纪录片
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/TV/纪录片
     flatten_mode: False
     subtitle: True
     image: False
@@ -106,11 +106,11 @@ Alist2StrmList:
 
   - id: 综艺
     cron: 0 6 * * * # 定时任务表达式 (每日早上 6:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/TV/综艺
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/TV/综艺
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/TV/综艺
     flatten_mode: False
     subtitle: True
     image: False
@@ -126,11 +126,11 @@ Alist2StrmList:
 
   - id: 动漫
     cron: 30 1 * * * # 定时任务表达式 (每日凌晨 1:30)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/Animates/动漫
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/Animates/动漫
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/Animates/动漫
     flatten_mode: False
     subtitle: True
     image: False
@@ -146,11 +146,11 @@ Alist2StrmList:
 
   - id: 国漫
     cron: 30 2 * * * # 定时任务表达式 (每日凌晨 2:30)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/Animates/国漫
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/Animates/国漫
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/Animates/国漫
     flatten_mode: False
     subtitle: True
     image: False
@@ -166,11 +166,11 @@ Alist2StrmList:
 
   - id: 外语电影
     cron: 0 7 * * * # 定时任务表达式 (每日早上 7:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/Movies/外语电影
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/Movies/外语电影
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/Movies/外语电影
     flatten_mode: False
     subtitle: True
     image: False
@@ -186,11 +186,11 @@ Alist2StrmList:
 
   - id: 华语电影
     cron: 30 7 * * * # 定时任务表达式 (每日早上 7:30)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/Movies/华语电影
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/Movies/华语电影
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/Movies/华语电影
     flatten_mode: False
     subtitle: True
     image: False
@@ -206,11 +206,11 @@ Alist2StrmList:
 
   - id: 动画电影
     cron: 0 8 * * * # 定时任务表达式 (每日早上 8:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/Movies/动画电影
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/Movies/动画电影
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/Movies/动画电影
     flatten_mode: False
     subtitle: True
     image: False
@@ -226,11 +226,11 @@ Alist2StrmList:
     
   - id: NoSign
     cron: 0 9 * * * # 定时任务表达式 (每日早上 9:00)
-    url: http://openlist:5244
+    url: http://192.168.1.2:5244
     username: admin
     password: Shuonoopenlist1791..
     source_dir: /123云盘/Video/NoSign
-    target_dir: /vol1/1000/Share/视频/媒体库/strm/NoSign
+    target_dir: /vol2/1000/Share/视频/媒体库/strm/NoSign
     flatten_mode: False
     subtitle: True
     image: False
